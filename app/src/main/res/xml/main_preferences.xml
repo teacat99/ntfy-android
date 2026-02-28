@@ -86,6 +86,12 @@
         <Preference
             app:key="@string/settings_advanced_exact_alarms_key"
             app:title="@string/settings_advanced_exact_alarms_title"/>
+        <SwitchPreferenceCompat
+                app:key="@string/settings_keep_alive_enabled_key"
+                app:title="@string/settings_keep_alive_enabled_title"
+                app:summaryOn="@string/settings_keep_alive_enabled_summary_enabled"
+                app:summaryOff="@string/settings_keep_alive_enabled_summary_disabled"
+                app:defaultValue="false"/>
         <Preference
             app:key="@string/settings_advanced_custom_headers_key"
             app:title="@string/settings_advanced_custom_headers_title"

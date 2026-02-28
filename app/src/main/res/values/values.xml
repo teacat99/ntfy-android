@@ -36,6 +36,7 @@
     <string name="settings_advanced_clear_logs_key" translatable="false">ClearLogs</string>
     <string name="settings_advanced_connection_protocol_key" translatable="false">ConnectionProtocol</string>
     <string name="settings_advanced_exact_alarms_key" translatable="false">ExactAlarms</string>
+    <string name="settings_keep_alive_enabled_key" translatable="false">KeepAliveEnabled</string>
     <string name="settings_about_version_key" translatable="false">Version</string>
 
     <!-- Detail settings constants -->

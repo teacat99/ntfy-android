@@ -35,6 +35,7 @@ import io.heckel.ntfy.backup.Backuper
 import io.heckel.ntfy.db.CustomHeader
 import io.heckel.ntfy.db.Repository
 import io.heckel.ntfy.db.User
+import io.heckel.ntfy.service.SubscriberService
 import io.heckel.ntfy.service.SubscriberServiceManager
 import io.heckel.ntfy.util.*
 import kotlinx.coroutines.Dispatchers
@@ -500,6 +501,36 @@ class SettingsActivity : AppCompatActivity(), PreferenceFragmentCompat.OnPrefere
                     getString(R.string.settings_general_default_base_url_default_summary, appBaseUrl)
                 } else {
                     currentUrl
+                }
+            }
+
+            // Enhanced keep alive (changes SubscriberService periodic restart interval)
+            val keepAliveEnabledPrefId = context?.getString(R.string.settings_keep_alive_enabled_key) ?: return
+            val keepAliveEnabled: SwitchPreferenceCompat? = findPreference(keepAliveEnabledPrefId)
+            keepAliveEnabled?.isChecked = repository.getKeepAliveEnabled()
+            keepAliveEnabled?.preferenceDataStore = object : PreferenceDataStore() {
+                override fun putBoolean(key: String?, value: Boolean) {
+                    repository.setKeepAliveEnabled(value)
+                    val intervalMinutes = if (value) {
+                        SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_ENHANCED
+                    } else {
+                        SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_DEFAULT
+                    }
+                    val work = androidx.work.PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(intervalMinutes, TimeUnit.MINUTES)
+                        .addTag(SubscriberService.TAG)
+                        .addTag(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC)
+                        .build()
+                    androidx.work.WorkManager
+                        .getInstance(requireContext())
+                        .enqueueUniquePeriodicWork(
+                            SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC,
+                            androidx.work.ExistingPeriodicWorkPolicy.REPLACE,
+                            work
+                        )
+                }
+
+                override fun getBoolean(key: String?, defValue: Boolean): Boolean {
+                    return repository.getKeepAliveEnabled()
                 }
             }
 

@@ -410,6 +410,16 @@ class Repository(private val sharedPrefs: SharedPreferences, database: Database)
         }
     }
 
+    fun getKeepAliveEnabled(): Boolean {
+        return sharedPrefs.getBoolean(SHARED_PREFS_KEEP_ALIVE_ENABLED, false) // Disabled by default
+    }
+
+    fun setKeepAliveEnabled(enabled: Boolean) {
+        sharedPrefs.edit {
+            putBoolean(SHARED_PREFS_KEEP_ALIVE_ENABLED, enabled)
+        }
+    }
+
     fun getBatteryOptimizationsRemindTime(): Long {
         return sharedPrefs.getLong(SHARED_PREFS_BATTERY_OPTIMIZATIONS_REMIND_TIME, BATTERY_OPTIMIZATIONS_REMIND_TIME_ALWAYS)
     }
@@ -624,6 +634,7 @@ class Repository(private val sharedPrefs: SharedPreferences, database: Database)
         const val SHARED_PREFS_UNIFIED_PUSH_BASE_URL = "UnifiedPushBaseURL" // Legacy key required for migration to DefaultBaseURL
         const val SHARED_PREFS_DEFAULT_BASE_URL = "DefaultBaseURL"
         const val SHARED_PREFS_LAST_TOPICS = "LastTopics"
+        const val SHARED_PREFS_KEEP_ALIVE_ENABLED = "KeepAliveEnabled"
 
         private const val LAST_TOPICS_COUNT = 3
 

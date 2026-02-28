@@ -461,6 +461,9 @@
     <string name="settings_advanced_certificates_client_add_summary">Import certificate for mutual TLS authentication (PKCS#12). This certificate will be used when connecting to the server.</string>
     <string name="settings_advanced_certificates_error_invalid_cert">Invalid certificate file</string>
     <string name="settings_advanced_certificates_error_invalid_p12">Invalid PKCS#12 file</string>
+    <string name="settings_keep_alive_enabled_title">Enhanced background reliability</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Periodically restarts the subscription service to improve delivery reliability (may use more battery)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Use default background behavior (better for battery)</string>
     <string name="settings_about_header">About</string>
     <string name="settings_about_version_title">Version</string>
     <string name="settings_about_version_format">ntfy %1$s (%2$s)</string>

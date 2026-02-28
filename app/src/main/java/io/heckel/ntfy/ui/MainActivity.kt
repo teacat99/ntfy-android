@@ -475,11 +475,16 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
             repository.setAutoRestartWorkerVersion(SubscriberService.SERVICE_START_WORKER_VERSION)
             ExistingPeriodicWorkPolicy.REPLACE
         }
-        val work = PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(SERVICE_START_WORKER_INTERVAL_MINUTES, TimeUnit.MINUTES)
+        val intervalMinutes = if (repository.getKeepAliveEnabled()) {
+            SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_ENHANCED
+        } else {
+            SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_DEFAULT
+        }
+        val work = PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(intervalMinutes, TimeUnit.MINUTES)
             .addTag(SubscriberService.TAG)
             .addTag(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC)
             .build()
-        Log.d(TAG, "ServiceStartWorker: Scheduling period work every $SERVICE_START_WORKER_INTERVAL_MINUTES minutes")
+        Log.d(TAG, "ServiceStartWorker: Scheduling periodic work every $intervalMinutes minutes")
         workManager?.enqueueUniquePeriodicWork(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC, workPolicy, work)
     }
 
@@ -870,12 +875,7 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
         const val ANIMATION_DURATION = 80L
         const val ONE_DAY_MILLIS = 86400000L
 
-        // As per documentation: The minimum repeat interval that can be defined is 15 minutes
-        // (same as the JobScheduler API), but in practice 15 doesn't work. Using 16 here.
-        // Thanks to varunon9 (https://gist.github.com/varunon9/f2beec0a743c96708eb0ef971a9ff9cd) for this!
-
         const val POLL_WORKER_INTERVAL_MINUTES = 60L
         const val DELETE_WORKER_INTERVAL_MINUTES = 8 * 60L
-        const val SERVICE_START_WORKER_INTERVAL_MINUTES = 3 * 60L
     }
 }
