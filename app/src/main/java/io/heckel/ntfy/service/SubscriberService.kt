@@ -90,15 +90,21 @@ class SubscriberService : Service() {
             initializeForegroundState()
         }
 
-        if (intent != null) {
-            Log.d(TAG, "using an intent with action ${intent.action}")
-            when (intent.action) {
-                Action.START.name -> startService()
-                Action.STOP.name -> stopService()
-                else -> Log.w(TAG, "This should never happen. No action in the received intent")
+        val action = intent?.action
+        Log.d(TAG, "onStartCommand action: $action")
+        when (action) {
+            Action.START.name -> startService()
+            Action.STOP.name -> stopService()
+            null -> {
+                // If Android restarts the sticky service, the intent can be null.
+                // Ensure we actually restore the subscriptions instead of only showing the notification.
+                Log.d(TAG, "Null intent/action; assuming START to restore subscriptions")
+                startService()
             }
-        } else {
-            Log.d(TAG, "with a null intent. It has been probably restarted by the system.")
+            else -> {
+                Log.w(TAG, "Unknown action '$action'; assuming START")
+                startService()
+            }
         }
         return START_STICKY // restart if system kills the service
     }
@@ -429,11 +435,11 @@ class SubscriberService : Service() {
         val restartServiceIntent = Intent(applicationContext, SubscriberService::class.java).also {
             it.setPackage(packageName)
         }
+        restartServiceIntent.action = Action.START.name
         val restartServicePendingIntent: PendingIntent =
-            PendingIntent.getService(this, 1, restartServiceIntent, PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE)
-        applicationContext.getSystemService(ALARM_SERVICE)
+            PendingIntent.getForegroundService(this, 1, restartServiceIntent, PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE)
         val alarmService: AlarmManager = applicationContext.getSystemService(ALARM_SERVICE) as AlarmManager
-        alarmService.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 1000, restartServicePendingIntent)
+        alarmService.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 1000, restartServicePendingIntent)
     }
 
     /* This re-starts the service on reboot; see manifest */
@@ -464,12 +470,6 @@ class SubscriberService : Service() {
         const val TAG = "NtfySubscriberService"
         const val SERVICE_START_WORKER_VERSION = BuildConfig.VERSION_CODE
         const val SERVICE_START_WORKER_WORK_NAME_PERIODIC = "NtfyAutoRestartWorkerPeriodic" // Do not change!
-        const val SERVICE_START_WORKER_INTERVAL_MINUTES_DEFAULT = 3 * 60L
-
-        // As per documentation: The minimum repeat interval that can be defined is 15 minutes
-        // (same as the JobScheduler API), but in practice 15 doesn't work. Using 16 here.
-        // Thanks to varunon9 (https://gist.github.com/varunon9/f2beec0a743c96708eb0ef971a9ff9cd) for this!
-        const val SERVICE_START_WORKER_INTERVAL_MINUTES_ENHANCED = 16L
 
         private const val WAKE_LOCK_TAG = "SubscriberService:lock"
         private const val NOTIFICATION_CHANNEL_ID = "ntfy-subscriber"
