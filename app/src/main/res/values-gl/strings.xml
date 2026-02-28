@@ -412,4 +412,11 @@
     <string name="common_button_add">Engadir</string>
     <string name="common_button_save">Gardar</string>
     <string name="common_button_delete">Eliminar</string>
+    <string name="settings_keep_alive_header">Manter activo</string>
+    <string name="settings_keep_alive_enabled_title">Fiabilidade mellorada en segundo plano</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Reinicia periodicamente o servizo de subscrición para mellorar a fiabilidade de entrega (pode usar máis batería)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Usar o comportamento predeterminado en segundo plano (mellor para a batería)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Ocultar das aplicacións recentes</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Elimina ntfy da lista de aplicacións recentes (reduce as eliminacións ao &quot;Borrar todo&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Amosar ntfy na lista de aplicacións recentes</string>
 </resources>

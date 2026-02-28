@@ -99,4 +99,11 @@
     <string name="detail_item_menu_delete">احذف الملف</string>
     <string name="publish_dialog_upload_cancelled">أُلغيَ الرفع</string>
     <string name="user_dialog_button_cancel">ألغِ</string>
+    <string name="settings_keep_alive_header">الإبقاء نشطًا</string>
+    <string name="settings_keep_alive_enabled_title">موثوقية محسّنة في الخلفية</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">يعيد تشغيل خدمة الاشتراك دوريًا لتحسين موثوقية التسليم (قد يستهلك بطارية أكثر)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">استخدم سلوك الخلفية الافتراضي (أفضل للبطارية)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">إخفاء من التطبيقات الأخيرة</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">يزيل ntfy من قائمة التطبيقات الأخيرة (يقلل عمليات الإغلاق عند &quot;مسح الكل&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">إظهار ntfy في قائمة التطبيقات الأخيرة</string>
 </resources>

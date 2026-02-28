@@ -53,4 +53,11 @@
     <string name="main_banner_battery_button_remind_later">ถามภายหลัง</string>
     <string name="main_banner_battery_button_dismiss">ปิดข้อความ</string>
     <string name="main_banner_battery_button_fix_now">แก้ไขตอนนี้</string>
+    <string name="settings_keep_alive_header">คงการทำงาน</string>
+    <string name="settings_keep_alive_enabled_title">เพิ่มความเสถียรในเบื้องหลัง</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">รีสตาร์ตบริการสมัครรับข้อมูลเป็นระยะเพื่อเพิ่มความน่าเชื่อถือในการส่ง (อาจใช้แบตเตอรี่มากขึ้น)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">ใช้พฤติกรรมเบื้องหลังเริ่มต้น (ดีกว่าสำหรับแบตเตอรี่)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">ซ่อนจากแอปล่าสุด</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">ลบ ntfy ออกจากรายการแอปล่าสุด (ลดการถูกปิดด้วย &quot;ล้างทั้งหมด&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">แสดง ntfy ในรายการแอปล่าสุด</string>
 </resources>

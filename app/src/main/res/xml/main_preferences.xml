@@ -86,12 +86,6 @@
         <Preference
             app:key="@string/settings_advanced_exact_alarms_key"
             app:title="@string/settings_advanced_exact_alarms_title"/>
-        <SwitchPreferenceCompat
-                app:key="@string/settings_keep_alive_enabled_key"
-                app:title="@string/settings_keep_alive_enabled_title"
-                app:summaryOn="@string/settings_keep_alive_enabled_summary_enabled"
-                app:summaryOff="@string/settings_keep_alive_enabled_summary_disabled"
-                app:defaultValue="false"/>
         <Preference
             app:key="@string/settings_advanced_custom_headers_key"
             app:title="@string/settings_advanced_custom_headers_title"
@@ -125,6 +119,20 @@
                 app:key="@string/settings_advanced_clear_logs_key"
                 app:title="@string/settings_advanced_clear_logs_title"
                 app:summary="@string/settings_advanced_clear_logs_summary"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/settings_keep_alive_header">
+        <SwitchPreferenceCompat
+                app:key="@string/settings_keep_alive_enabled_key"
+                app:title="@string/settings_keep_alive_enabled_title"
+                app:summaryOn="@string/settings_keep_alive_enabled_summary_enabled"
+                app:summaryOff="@string/settings_keep_alive_enabled_summary_disabled"
+                app:defaultValue="false"/>
+        <SwitchPreferenceCompat
+                app:key="@string/settings_keep_alive_hide_from_recents_key"
+                app:title="@string/settings_keep_alive_hide_from_recents_title"
+                app:summaryOn="@string/settings_keep_alive_hide_from_recents_summary_enabled"
+                app:summaryOff="@string/settings_keep_alive_hide_from_recents_summary_disabled"
+                app:defaultValue="false"/>
     </PreferenceCategory>
     <PreferenceCategory app:title="@string/settings_about_header">
         <Preference

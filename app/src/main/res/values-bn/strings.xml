@@ -9,4 +9,11 @@
     <string name="channel_subscriber_notification_title">আগত নোটিফিকেশন এর জন্য অপেক্ষা করা হচ্ছে</string>
     <string name="channel_subscriber_notification_instant_text">তাত্ক্ষণিক পাওয়া বিষয়গুলোতে যোগ দেওয়া হয়েছে</string>
     <string name="user_dialog_button_add">ব্যবহারকারী যোগ করুন</string>
+    <string name="settings_keep_alive_header">সক্রিয় রাখুন</string>
+    <string name="settings_keep_alive_enabled_title">উন্নত ব্যাকগ্রাউন্ড নির্ভরযোগ্যতা</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">ডেলিভারি নির্ভরযোগ্যতা বাড়াতে সাবস্ক্রিপশন সার্ভিস নিয়মিত পুনরায় চালু করে (আরও ব্যাটারি খরচ হতে পারে)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">ডিফল্ট ব্যাকগ্রাউন্ড আচরণ ব্যবহার করুন (ব্যাটারির জন্য ভালো)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">সাম্প্রতিক অ্যাপ থেকে লুকান</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">সাম্প্রতিক অ্যাপ তালিকা থেকে ntfy সরিয়ে দেয় (&quot;সব মুছুন&quot; কিলে কম)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">সাম্প্রতিক অ্যাপ তালিকায় ntfy দেখান</string>
 </resources>

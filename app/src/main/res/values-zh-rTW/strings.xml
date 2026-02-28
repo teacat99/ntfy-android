@@ -469,4 +469,12 @@
     <string name="detail_no_search_results">您的搜尋未找到任何結果</string>
     <string name="detail_menu_search">搜尋通知</string>
     <string name="detail_menu_search_hint">通知中的搜尋</string>
+
+    <string name="settings_keep_alive_header">保活</string>
+    <string name="settings_keep_alive_enabled_title">增強背景可靠性</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">定期重新啟動訂閱服務以提升送達可靠性（可能更耗電）</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">使用預設背景行為（較省電）</string>
+    <string name="settings_keep_alive_hide_from_recents_title">從最近任務隱藏</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">從最近任務列表移除（降低「一鍵清理」被殺的機率）</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">在最近任務列表中顯示</string>
 </resources>

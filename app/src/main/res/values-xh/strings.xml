@@ -6,4 +6,11 @@
     <string name="main_banner_websocket_button_dismiss">Gxotha</string>
     <string name="add_dialog_button_cancel">Rhoxisa</string>
     <string name="add_dialog_button_subscribe">Bhalisa</string>
+    <string name="settings_keep_alive_header">Gcina isebenza</string>
+    <string name="settings_keep_alive_enabled_title">Ukuthembeka okuphuculweyo kwasemva</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Iqala kwakhona inkonzo yokubhalisa rhoqo ukuphucula ukuthembeka kokuhanjiswa (inokusebenzisa ibhetri eninzi)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Sebenzisa indlela engasemva emiselweyo (ingcono kwibhetri)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Fihla kwi-apps zamva nje</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Isusa i-ntfy kuluhlu lwe-apps zamva nje (kunciphisa ukubulawa ngo &quot;cima konke&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Bonisa i-ntfy kuluhlu lwe-apps zamva nje</string>
 </resources>

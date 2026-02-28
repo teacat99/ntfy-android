@@ -6,4 +6,11 @@
     <string name="common_priority_default_name">Ѻбыденное преимѹ́щество</string>
     <string name="common_priority_high_name">Высо́кое преимѹ́щество</string>
     <string name="common_priority_max_name">Макс преимѹ́щество</string>
+    <string name="settings_keep_alive_header">Поддерживать активным</string>
+    <string name="settings_keep_alive_enabled_title">Повышенная надёжность в фоне</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Периодически перезапускает службу подписки для повышения надёжности доставки (может расходовать больше батареи)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Использовать поведение в фоне по умолчанию (лучше для батареи)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Скрыть из недавних приложений</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Удаляет ntfy из списка недавних приложений (снижает закрытия при &quot;Очистить всё&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Показывать ntfy в списке недавних приложений</string>
 </resources>

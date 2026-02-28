@@ -1,6 +1,7 @@
 package io.heckel.ntfy.ui
 
 import android.Manifest
+import android.app.ActivityManager
 import android.app.AlarmManager
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -35,15 +36,14 @@ import io.heckel.ntfy.backup.Backuper
 import io.heckel.ntfy.db.CustomHeader
 import io.heckel.ntfy.db.Repository
 import io.heckel.ntfy.db.User
-import io.heckel.ntfy.service.SubscriberService
 import io.heckel.ntfy.service.SubscriberServiceManager
 import io.heckel.ntfy.util.*
+import io.heckel.ntfy.worker.KeepAliveWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.text.SimpleDateFormat
 import java.util.*
-import java.util.concurrent.TimeUnit
 
 /**
  * Main settings
@@ -504,33 +504,47 @@ class SettingsActivity : AppCompatActivity(), PreferenceFragmentCompat.OnPrefere
                 }
             }
 
-            // Enhanced keep alive (changes SubscriberService periodic restart interval)
+            // Keep-alive (independent WorkManager chain)
             val keepAliveEnabledPrefId = context?.getString(R.string.settings_keep_alive_enabled_key) ?: return
             val keepAliveEnabled: SwitchPreferenceCompat? = findPreference(keepAliveEnabledPrefId)
             keepAliveEnabled?.isChecked = repository.getKeepAliveEnabled()
             keepAliveEnabled?.preferenceDataStore = object : PreferenceDataStore() {
                 override fun putBoolean(key: String?, value: Boolean) {
                     repository.setKeepAliveEnabled(value)
-                    val intervalMinutes = if (value) {
-                        SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_ENHANCED
+                    if (value) {
+                        KeepAliveWorker.scheduleNow(requireContext())
                     } else {
-                        SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_DEFAULT
+                        KeepAliveWorker.cancel(requireContext())
                     }
-                    val work = androidx.work.PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(intervalMinutes, TimeUnit.MINUTES)
-                        .addTag(SubscriberService.TAG)
-                        .addTag(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC)
-                        .build()
-                    androidx.work.WorkManager
-                        .getInstance(requireContext())
-                        .enqueueUniquePeriodicWork(
-                            SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC,
-                            androidx.work.ExistingPeriodicWorkPolicy.REPLACE,
-                            work
-                        )
                 }
 
                 override fun getBoolean(key: String?, defValue: Boolean): Boolean {
                     return repository.getKeepAliveEnabled()
+                }
+            }
+
+            // Hide from recent apps (optional)
+            val hideFromRecentsPrefId = context?.getString(R.string.settings_keep_alive_hide_from_recents_key) ?: return
+            val hideFromRecents: SwitchPreferenceCompat? = findPreference(hideFromRecentsPrefId)
+            hideFromRecents?.isChecked = repository.getKeepAliveHideFromRecentsEnabled()
+            hideFromRecents?.preferenceDataStore = object : PreferenceDataStore() {
+                override fun putBoolean(key: String?, value: Boolean) {
+                    repository.setKeepAliveHideFromRecentsEnabled(value)
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        try {
+                            val am = requireContext().getSystemService(ActivityManager::class.java) ?: return
+                            val tasks = am.appTasks
+                            if (!tasks.isNullOrEmpty()) {
+                                tasks[0].setExcludeFromRecents(value)
+                            }
+                        } catch (e: Exception) {
+                            Log.w(TAG, "Failed to toggle excludeFromRecents: ${e.message}")
+                        }
+                    }
+                }
+
+                override fun getBoolean(key: String?, defValue: Boolean): Boolean {
+                    return repository.getKeepAliveHideFromRecentsEnabled()
                 }
             }
 

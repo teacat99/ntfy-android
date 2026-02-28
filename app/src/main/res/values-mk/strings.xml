@@ -5,4 +5,11 @@
     <string name="common_priority_default_name">Стандарден приоритет</string>
     <string name="common_priority_high_name">Висок приоритет</string>
     <string name="common_priority_max_name">Највисок приоритет</string>
+    <string name="settings_keep_alive_header">Одржувај активно</string>
+    <string name="settings_keep_alive_enabled_title">Подобрена доверливост во позадина</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Периодично ја рестартира услугата за претплата за да ја подобри доверливоста на испораката (може да користи повеќе батерија)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Користи стандардно однесување во позадина (подобро за батерија)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Сокриј од неодамнешни апликации</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Го отстранува ntfy од списокот на неодамнешни апликации (намалува &quot;исчисти сè&quot; убивања)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Прикажи го ntfy во списокот на неодамнешни апликации</string>
 </resources>

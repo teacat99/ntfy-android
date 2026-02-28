@@ -51,4 +51,11 @@
     <string name="main_banner_battery_button_dismiss">Tutup</string>
     <string name="main_banner_battery_button_fix_now">Baiki sekarang</string>
     <string name="main_banner_websocket_button_enable_now">Aktif sekarang</string>
+    <string name="settings_keep_alive_header">Kekal aktif</string>
+    <string name="settings_keep_alive_enabled_title">Kebolehpercayaan latar belakang dipertingkat</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Memulakan semula perkhidmatan langganan secara berkala untuk meningkatkan kebolehpercayaan penghantaran (mungkin menggunakan lebih banyak bateri)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Gunakan tingkah laku latar belakang lalai (lebih baik untuk bateri)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Sembunyikan daripada aplikasi terkini</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Mengalih keluar ntfy daripada senarai aplikasi terkini (mengurangkan penutupan &quot;padam semua&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Paparkan ntfy dalam senarai aplikasi terkini</string>
 </resources>

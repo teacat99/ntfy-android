@@ -361,4 +361,11 @@
     <string name="publish_dialog_chip_delay">Затримка</string>
     <string name="publish_dialog_chip_attach_url">Додати за URL-адресою</string>
     <string name="publish_dialog_chip_attach_file">Додати локальний файл</string>
+    <string name="settings_keep_alive_header">Підтримувати активним</string>
+    <string name="settings_keep_alive_enabled_title">Підвищена надійність у фоні</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Періодично перезапускає службу підписок для підвищення надійності доставки (може споживати більше батареї)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Використовувати стандартну поведінку у фоні (краще для батареї)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Приховати з нещодавніх програм</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Видаляє ntfy зі списку нещодавніх програм (зменшує закриття при &quot;Очистити все&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Показувати ntfy у списку нещодавніх програм</string>
 </resources>

@@ -80,4 +80,11 @@
     <string name="add_dialog_login_description">Αυτό το θέμα απαιτεί να συνδεθείτε. Παρακαλώ πληκτρολογήστε ένα όνομα χρήστη και έναν κωδικό πρόσβασης.</string>
     <string name="main_banner_websocket_button_dismiss">Απορρίψτε το</string>
     <string name="add_dialog_button_back">Πίσω</string>
+    <string name="settings_keep_alive_header">Διατήρηση ενεργό</string>
+    <string name="settings_keep_alive_enabled_title">Βελτιωμένη αξιοπιστία στο παρασκήνιο</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Επανεκκινεί περιοδικά την υπηρεσία συνδρομών για βελτίωση αξιοπιστίας παράδοσης (μπορεί να χρησιμοποιεί περισσότερη μπαταρία)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Χρήση προεπιλεγμένης συμπεριφοράς παρασκηνίου (καλύτερο για την μπαταρία)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Απόκρυψη από τις πρόσφατες εφαρμογές</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Αφαιρεί το ntfy από τη λίστα πρόσφατων εφαρμογών (μειώνει τα κλεισίματα από &quot;εκκαθάριση όλων&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Εμφάνιση του ntfy στη λίστα πρόσφατων εφαρμογών</string>
 </resources>

@@ -83,4 +83,11 @@
     <string name="main_menu_report_bug_title">Prijavu grešku</string>
     <string name="main_how_to_link">Opširnije upute dostupne su na ntfy.sh i u dokumentaciji.</string>
     <string name="main_how_to_intro">Klikni + za kreiranje ili pretplaćivanje na temu. Nakon toga primaš obavijesti na uređaj kad pošalješ poruke preko PUT ili POST.</string>
+    <string name="settings_keep_alive_header">Održi aktivnim</string>
+    <string name="settings_keep_alive_enabled_title">Poboljšana pouzdanost u pozadini</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Periodično ponovno pokreće uslugu pretplate radi poboljšanja pouzdanosti isporuke (može trošiti više baterije)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Koristi zadano ponašanje u pozadini (bolje za bateriju)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Sakrij iz nedavnih aplikacija</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Uklanja ntfy s popisa nedavnih aplikacija (smanjuje gašenja pri &quot;Očisti sve&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Prikaži ntfy na popisu nedavnih aplikacija</string>
 </resources>

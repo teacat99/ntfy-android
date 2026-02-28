@@ -338,4 +338,11 @@
     <string name="settings_advanced_export_logs_entry_upload_original">Carregar i copiar enllaç</string>
     <string name="user_dialog_button_delete">Eliminar usuari</string>
     <string name="common_button_save">Guardar</string>
+    <string name="settings_keep_alive_header">Mantenir actiu</string>
+    <string name="settings_keep_alive_enabled_title">Fiabilitat millorada en segon pla</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Reinicia periòdicament el servei de subscripció per millorar la fiabilitat de lliurament (pot consumir més bateria)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Utilitza el comportament en segon pla predeterminat (millor per a la bateria)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Amaga de les aplicacions recents</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Elimina ntfy de la llista d\'aplicacions recents (redueix les eliminacions amb &quot;Esborra-ho tot&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Mostra ntfy a la llista d\'aplicacions recents</string>
 </resources>

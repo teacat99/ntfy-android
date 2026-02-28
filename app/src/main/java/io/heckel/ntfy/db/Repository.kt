@@ -420,6 +420,16 @@ class Repository(private val sharedPrefs: SharedPreferences, database: Database)
         }
     }
 
+    fun getKeepAliveHideFromRecentsEnabled(): Boolean {
+        return sharedPrefs.getBoolean(SHARED_PREFS_KEEP_ALIVE_HIDE_FROM_RECENTS_ENABLED, false) // Disabled by default
+    }
+
+    fun setKeepAliveHideFromRecentsEnabled(enabled: Boolean) {
+        sharedPrefs.edit {
+            putBoolean(SHARED_PREFS_KEEP_ALIVE_HIDE_FROM_RECENTS_ENABLED, enabled)
+        }
+    }
+
     fun getBatteryOptimizationsRemindTime(): Long {
         return sharedPrefs.getLong(SHARED_PREFS_BATTERY_OPTIMIZATIONS_REMIND_TIME, BATTERY_OPTIMIZATIONS_REMIND_TIME_ALWAYS)
     }
@@ -635,6 +645,7 @@ class Repository(private val sharedPrefs: SharedPreferences, database: Database)
         const val SHARED_PREFS_DEFAULT_BASE_URL = "DefaultBaseURL"
         const val SHARED_PREFS_LAST_TOPICS = "LastTopics"
         const val SHARED_PREFS_KEEP_ALIVE_ENABLED = "KeepAliveEnabled"
+        const val SHARED_PREFS_KEEP_ALIVE_HIDE_FROM_RECENTS_ENABLED = "KeepAliveHideFromRecents"
 
         private const val LAST_TOPICS_COUNT = 3
 

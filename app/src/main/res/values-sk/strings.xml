@@ -431,4 +431,11 @@
     <string name="custom_headers_dialog_title_edit">Upraviť vlastnú hlavičku</string>
     <string name="custom_headers_dialog_name_hint">Názov hlavičky (napr. CF-Access-Client-Id)</string>
     <string name="custom_headers_dialog_value_hint">Hodnota hlavičky (napr. 9f3c2e4a1b2d4e)</string>
+    <string name="settings_keep_alive_header">Udržiavať aktívne</string>
+    <string name="settings_keep_alive_enabled_title">Vylepšená spoľahlivosť na pozadí</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Pravidelne reštartuje službu odberu na zlepšenie spoľahlivosti doručenia (môže spotrebovať viac batérie)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Použiť predvolené správanie na pozadí (lepšie pre batériu)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Skryť z nedávnych aplikácií</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Odstráni ntfy zo zoznamu nedávnych aplikácií (znižuje ukončenia pri &quot;Vymazať všetko&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Zobraziť ntfy v zozname nedávnych aplikácií</string>
 </resources>

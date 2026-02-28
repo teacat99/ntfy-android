@@ -473,4 +473,12 @@
     <string name="channel_subscriber_notification_reconnecting_one">Reconnexion à 1 sujet…</string>
     <string name="channel_subscriber_notification_reconnecting_other">Reconnexion à %1$d sujets…</string>
     <string name="default_server_dialog_url_error_invalid">Entrez une URL de service valide, par ex. https://ntfy.example.com</string>
+
+    <string name="settings_keep_alive_enabled_title">Fiabilité en arrière-plan améliorée</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Redémarre périodiquement le service d’abonnement pour améliorer la fiabilité de livraison (peut consommer plus de batterie)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Utiliser le comportement d’arrière-plan par défaut (meilleur pour la batterie)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Masquer des applications récentes</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Retire ntfy de la liste des apps récentes (réduit les fermetures via &quot;Tout effacer&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Afficher ntfy dans la liste des apps récentes</string>
+    <string name="settings_keep_alive_header">Maintien en arrière-plan</string>
 </resources>

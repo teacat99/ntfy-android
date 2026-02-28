@@ -3,6 +3,7 @@ package io.heckel.ntfy.ui
 import android.Manifest
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
+import android.app.ActivityManager
 import android.app.AlarmManager
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
@@ -135,6 +136,9 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
 
         Log.init(this) // Init logs in all entry points
         Log.d(TAG, "Create $this")
+
+        // Optional: hide from recents to reduce "clear all" kills on aggressive ROMs
+        maybeExcludeFromRecents()
 
         // Dependencies that depend on Context
         workManager = WorkManager.getInstance(this)
@@ -359,9 +363,26 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
         schedulePeriodicPollWorker()
         schedulePeriodicServiceRestartWorker()
         schedulePeriodicDeleteWorker()
+        SubscriberServiceManager.refresh(this) // Ensure service starts/stops quickly after app start
 
         // Permissions
         maybeRequestNotificationPermission()
+    }
+
+    private fun maybeExcludeFromRecents() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            return
+        }
+        val exclude = repository.getKeepAliveHideFromRecentsEnabled()
+        try {
+            val am = getSystemService(ACTIVITY_SERVICE) as ActivityManager
+            val tasks = am.appTasks
+            if (!tasks.isNullOrEmpty()) {
+                tasks[0].setExcludeFromRecents(exclude)
+            }
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to exclude from recents: ${e.message}")
+        }
     }
 
     private fun maybeRequestNotificationPermission() {
@@ -375,6 +396,7 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
 
     override fun onResume() {
         super.onResume()
+        maybeExcludeFromRecents()
         showHideNotificationMenuItems()
         showHideConnectionErrorMenuItem(repository.getConnectionDetails())
         redrawList()
@@ -475,16 +497,11 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
             repository.setAutoRestartWorkerVersion(SubscriberService.SERVICE_START_WORKER_VERSION)
             ExistingPeriodicWorkPolicy.REPLACE
         }
-        val intervalMinutes = if (repository.getKeepAliveEnabled()) {
-            SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_ENHANCED
-        } else {
-            SubscriberService.SERVICE_START_WORKER_INTERVAL_MINUTES_DEFAULT
-        }
-        val work = PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(intervalMinutes, TimeUnit.MINUTES)
+        val work = PeriodicWorkRequestBuilder<SubscriberServiceManager.ServiceStartWorker>(SERVICE_START_WORKER_INTERVAL_MINUTES, TimeUnit.MINUTES)
             .addTag(SubscriberService.TAG)
             .addTag(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC)
             .build()
-        Log.d(TAG, "ServiceStartWorker: Scheduling periodic work every $intervalMinutes minutes")
+        Log.d(TAG, "ServiceStartWorker: Scheduling period work every $SERVICE_START_WORKER_INTERVAL_MINUTES minutes")
         workManager?.enqueueUniquePeriodicWork(SubscriberService.SERVICE_START_WORKER_WORK_NAME_PERIODIC, workPolicy, work)
     }
 
@@ -877,5 +894,6 @@ class MainActivity : AppCompatActivity(), AddFragment.SubscribeListener, Notific
 
         const val POLL_WORKER_INTERVAL_MINUTES = 60L
         const val DELETE_WORKER_INTERVAL_MINUTES = 8 * 60L
+        const val SERVICE_START_WORKER_INTERVAL_MINUTES = 3 * 60L
     }
 }

@@ -131,4 +131,11 @@
     <string name="detail_item_download_info_not_downloaded">بارگیری نشده</string>
     <string name="common_copied_to_clipboard">در تخته‌گیره رونوشت شد</string>
     <string name="publish_dialog_title_placeholder">نمونه: کسی پشت در است</string>
+    <string name="settings_keep_alive_header">فعال نگه‌داشتن</string>
+    <string name="settings_keep_alive_enabled_title">قابلیت اطمینان بهتر در پس‌زمینه</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">برای بهبود قابلیت اطمینان تحویل، سرویس اشتراک را به‌طور دوره‌ای بازراه‌اندازی می‌کند (ممکن است باتری بیشتری مصرف کند)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">از رفتار پیش‌فرض پس‌زمینه استفاده کنید (بهتر برای باتری)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">پنهان از برنامه‌های اخیر</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">ntfy را از فهرست برنامه‌های اخیر حذف می‌کند (کاهش بسته‌شدن با &quot;پاک کردن همه&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">نمایش ntfy در فهرست برنامه‌های اخیر</string>
 </resources>

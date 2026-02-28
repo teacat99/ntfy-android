@@ -3,4 +3,11 @@
     <string name="common_priority_min_name">Min prioritato</string>
     <string name="common_priority_low_name">Malalta prioritato</string>
     <string name="common_priority_default_name">Defaŭlta prioritato</string>
+    <string name="settings_keep_alive_header">Teni aktiva</string>
+    <string name="settings_keep_alive_enabled_title">Plibonigita fona fidindeco</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Periode restartas la abonservon por plibonigi liverfidindecon (povas uzi pli da baterio)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Uzi defaŭltan fonan konduton (pli bona por baterio)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Kaŝi el lastatempaj aplikaĵoj</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Forigas ntfy el la listo de lastatempaj aplikaĵoj (reduktas &quot;forigi ĉion&quot;-mortigojn)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Montri ntfy en la listo de lastatempaj aplikaĵoj</string>
 </resources>

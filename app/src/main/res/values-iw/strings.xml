@@ -424,4 +424,11 @@
     <string name="client_certificate_dialog_error_invalid_p12_password">סיסמה שגויה או קובץ PKCS#12 פגום</string>
     <string name="client_certificate_dialog_error_wrong_password">סיסמה שגויה או קובץ PKCS#12 שגוי</string>
     <string name="client_certificate_dialog_password_hint">סיסמה</string>
+    <string name="settings_keep_alive_header">שמירה פעילה</string>
+    <string name="settings_keep_alive_enabled_title">אמינות משופרת ברקע</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">מאתחל מעת לעת את שירות המנויים כדי לשפר את אמינות המסירה (עשוי להשתמש ביותר סוללה)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">השתמש בהתנהגות ברקע כברירת מחדל (טוב יותר לסוללה)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">הסתרה מהיישומים האחרונים</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">מסיר את ntfy מרשימת היישומים האחרונים (מפחית סגירות ב־&quot;נקה הכול&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">הצג את ntfy ברשימת היישומים האחרונים</string>
 </resources>

@@ -473,4 +473,11 @@
     <string name="channel_subscriber_notification_reconnecting_one">Menghubungkan kembali ke 1 topik …</string>
     <string name="channel_subscriber_notification_reconnecting_other">Menghubungkan kembali ke %1$d topik …</string>
     <string name="default_server_dialog_url_error_invalid">Masukkan URL layanan yang sah, misalnya https://ntfy.example.com</string>
+    <string name="settings_keep_alive_header">Tetap aktif</string>
+    <string name="settings_keep_alive_enabled_title">Keandalan latar belakang yang ditingkatkan</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Memulai ulang layanan langganan secara berkala untuk meningkatkan keandalan pengiriman (dapat menggunakan lebih banyak baterai)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Gunakan perilaku latar belakang default (lebih baik untuk baterai)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Sembunyikan dari aplikasi terbaru</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Menghapus ntfy dari daftar aplikasi terbaru (mengurangi penghentian saat &quot;hapus semua&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Tampilkan ntfy di daftar aplikasi terbaru</string>
 </resources>

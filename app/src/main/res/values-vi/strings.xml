@@ -338,4 +338,11 @@
     <string name="detail_settings_about_header">About</string>
     <string name="detail_item_tags">Tags: %1$s</string>
     <string name="settings_advanced_export_logs_scrub_dialog_button_ok">OK</string>
+    <string name="settings_keep_alive_header">Giữ hoạt động</string>
+    <string name="settings_keep_alive_enabled_title">Tăng độ tin cậy khi chạy nền</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Khởi động lại dịch vụ đăng ký định kỳ để cải thiện độ tin cậy khi nhận (có thể tốn nhiều pin hơn)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Dùng hành vi chạy nền mặc định (tốt hơn cho pin)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Ẩn khỏi ứng dụng gần đây</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Gỡ ntfy khỏi danh sách ứng dụng gần đây (giảm bị tắt khi &quot;xóa tất cả&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Hiện ntfy trong danh sách ứng dụng gần đây</string>
 </resources>

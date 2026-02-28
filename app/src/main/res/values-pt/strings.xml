@@ -345,4 +345,11 @@
     <string name="settings_advanced_exact_alarms_title">Alarmes exactos</string>
     <string name="settings_advanced_exact_alarms_true">O ntfy pode agendar alarmes exatos. Alarmes exatos são necessários para reconectar os WebSockets em segundo plano. Clique para revogar a permissão.</string>
     <string name="settings_advanced_exact_alarms_false">O ntfy não pode agendar alarmes exatos. Alarmes exatos são necessários para reconectar os WebSockets em segundo plano. Clique para conceder a permissão.</string>
+    <string name="settings_keep_alive_header">Manter ativo</string>
+    <string name="settings_keep_alive_enabled_title">Fiabilidade melhorada em segundo plano</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Reinicia periodicamente o serviço de subscrição para melhorar a fiabilidade de entrega (pode usar mais bateria)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Usar o comportamento predefinido em segundo plano (melhor para a bateria)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Ocultar das aplicações recentes</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Remove o ntfy da lista de aplicações recentes (reduz mortes por &quot;limpar tudo&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Mostrar o ntfy na lista de aplicações recentes</string>
 </resources>

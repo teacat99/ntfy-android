@@ -338,4 +338,11 @@
     <string name="user_dialog_button_delete">Foydalanuvchini o‘chirish</string>
     <string name="user_dialog_title_add">Foydalanuvchi qo‘shish</string>
     <string name="common_button_save">Saqlash</string>
+    <string name="settings_keep_alive_header">Faol saqlash</string>
+    <string name="settings_keep_alive_enabled_title">Orqa fon ishonchliligi yaxshilandi</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Yetkazib berish ishonchliligini oshirish uchun obuna xizmatini vaqti-vaqti bilan qayta ishga tushiradi (ko‘proq batareya sarflashi mumkin)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Standart orqa fon xatti-harakatidan foydalanish (batareya uchun yaxshiroq)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">So‘nggi ilovalardan yashirish</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">ntfy ni so‘nggi ilovalar ro‘yxatidan olib tashlaydi (&quot;hammasini tozalash&quot; bilan o‘chirilishni kamaytiradi)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">ntfy ni so‘nggi ilovalar ro‘yxatida ko‘rsatish</string>
 </resources>

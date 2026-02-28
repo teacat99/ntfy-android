@@ -399,4 +399,11 @@
     <string name="publish_dialog_attach_filename_placeholder">örnek: lilies.jpg</string>
     <string name="publish_dialog_phone_call_hint">Telefon araması</string>
     <string name="publish_dialog_phone_call_placeholder">örnek: +1234567890</string>
+    <string name="settings_keep_alive_header">Canlı tut</string>
+    <string name="settings_keep_alive_enabled_title">Geliştirilmiş arka plan güvenilirliği</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Teslimat güvenilirliğini artırmak için abonelik hizmetini düzenli olarak yeniden başlatır (daha fazla pil kullanabilir)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Varsayılan arka plan davranışını kullan (pil için daha iyi)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Son uygulamalardan gizle</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">ntfy\'ı son uygulamalar listesinden kaldırır (&quot;tümünü temizle&quot; ile kapatılmayı azaltır)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">ntfy\'ı son uygulamalar listesinde göster</string>
 </resources>

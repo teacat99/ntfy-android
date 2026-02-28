@@ -344,4 +344,11 @@
     <string name="settings_general_dynamic_colors_title">Colori dinamici</string>
     <string name="settings_general_dynamic_colors_summary_enabled">Utilizzo dei colori del sistema dinamico</string>
     <string name="settings_general_dynamic_colors_summary_disabled">Utilizzo dei colori del tema di ntfy</string>
+    <string name="settings_keep_alive_header">Mantieni attivo</string>
+    <string name="settings_keep_alive_enabled_title">Affidabilità in background migliorata</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Riavvia periodicamente il servizio di sottoscrizione per migliorare l\'affidabilità di consegna (può consumare più batteria)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Usa il comportamento in background predefinito (meglio per la batteria)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Nascondi dalle app recenti</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Rimuove ntfy dall\'elenco delle app recenti (riduce le chiusure con &quot;Cancella tutto&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Mostra ntfy nell\'elenco delle app recenti</string>
 </resources>

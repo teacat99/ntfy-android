@@ -33,4 +33,11 @@
     <string name="settings_about_version_title">Weergawe</string>
     <string name="settings_advanced_connection_protocol_entry_ws">WebSockets</string>
     <string name="settings_advanced_export_logs_entry_copy_scrubbed">Kopieer na knipbord (gesensuur)</string>
+    <string name="settings_keep_alive_header">Hou aktief</string>
+    <string name="settings_keep_alive_enabled_title">Verbeterde agtergrondbetroubaarheid</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Herbegin die intekendiens periodiek om afleweringsbetroubaarheid te verbeter (kan meer battery gebruik)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Gebruik standaard agtergrondgedrag (beter vir battery)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Versteek uit onlangse programme</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Verwyder ntfy uit die onlangse programlys (verminder &quot;maak alles toe&quot;-beëindigings)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Wys ntfy in die onlangse programlys</string>
 </resources>

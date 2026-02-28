@@ -409,4 +409,12 @@
     <string name="common_service_url_placeholder">ej. https://ntfy.example.com</string>
     <string name="common_certificate_subject">Subject</string>
     <string name="main_menu_connection_error">Error de conexión</string>
+
+    <string name="settings_keep_alive_enabled_title">Fiabilidad mejorada en segundo plano</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Reinicia periódicamente el servicio de suscripción para mejorar la fiabilidad de entrega (puede consumir más batería)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Usar el comportamiento en segundo plano predeterminado (mejor para la batería)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Ocultar de apps recientes</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Elimina ntfy de la lista de apps recientes (reduce los cierres al usar &quot;Cerrar todo&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Mostrar ntfy en la lista de apps recientes</string>
+    <string name="settings_keep_alive_header">Mantener activo</string>
 </resources>

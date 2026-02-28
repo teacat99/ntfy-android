@@ -473,4 +473,11 @@
     <string name="channel_subscriber_notification_reconnecting_one">1件のトピックに再接続中…</string>
     <string name="channel_subscriber_notification_reconnecting_other">%1$d 件のトピックに再接続中…</string>
     <string name="default_server_dialog_url_error_invalid">有効なサービスURLを入力してください、例: https://ntfy.example.com</string>
+    <string name="settings_keep_alive_header">キープアライブ</string>
+    <string name="settings_keep_alive_enabled_title">バックグラウンドの信頼性を強化</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">配信の信頼性を向上させるため、定期的に購読サービスを再起動します（バッテリー消費が増える可能性があります）</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">既定のバックグラウンド動作を使用します（バッテリーに優しい）</string>
+    <string name="settings_keep_alive_hide_from_recents_title">最近使ったアプリから非表示</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">最近使ったアプリ一覧から ntfy を削除します（&quot;すべて消去&quot;で終了されにくくなります）</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">最近使ったアプリ一覧に ntfy を表示します</string>
 </resources>

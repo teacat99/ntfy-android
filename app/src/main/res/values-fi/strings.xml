@@ -338,4 +338,11 @@
     <string name="main_banner_websocket_reconnect_button_remind_later">Kysy myöhemmin</string>
     <string name="main_banner_websocket_reconnect_button_dismiss">Sulje</string>
     <string name="main_banner_websocket_reconnect_button_enable_now">Salli nyt</string>
+    <string name="settings_keep_alive_header">Pidä käynnissä</string>
+    <string name="settings_keep_alive_enabled_title">Parannettu taustatoiminnan luotettavuus</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Käynnistää tilausten palvelun säännöllisesti uudelleen toimitusluotettavuuden parantamiseksi (voi käyttää enemmän akkua)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Käytä oletustaustakäyttäytymistä (parempi akulle)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Piilota viimeaikaisista sovelluksista</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Poistaa ntfy:n viimeaikaisten sovellusten luettelosta (vähentää &quot;tyhjennä kaikki&quot; -lopetuksia)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Näytä ntfy viimeaikaisten sovellusten luettelossa</string>
 </resources>

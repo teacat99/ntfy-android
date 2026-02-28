@@ -93,4 +93,11 @@
     <string name="detail_delete_dialog_message">इस विषय से सदस्यता समाप्त करें और सभी प्राप्त अधिसूचनाएं हटा दें?</string>
     <string name="detail_delete_dialog_permanently_delete">स्थायी रूप से हटाएं</string>
     <string name="detail_test_title">परीक्षण: यदि आप चाहें तो शीर्षक निर्धारित कर सकते हैं।</string>
+    <string name="settings_keep_alive_header">सक्रिय रखें</string>
+    <string name="settings_keep_alive_enabled_title">बेहतर बैकग्राउंड विश्वसनीयता</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">डिलीवरी विश्वसनीयता बढ़ाने के लिए सब्सक्रिप्शन सेवा को समय-समय पर रीस्टार्ट करता है (ज़्यादा बैटरी लग सकती है)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">डिफ़ॉल्ट बैकग्राउंड व्यवहार का उपयोग करें (बैटरी के लिए बेहतर)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">हाल की ऐप्स से छिपाएँ</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">हाल की ऐप्स सूची से ntfy हटाता है (&quot;सब साफ़ करें&quot; में कम किल्स)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">हाल की ऐप्स सूची में ntfy दिखाएँ</string>
 </resources>

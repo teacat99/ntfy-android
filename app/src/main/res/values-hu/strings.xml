@@ -139,4 +139,11 @@
     <string name="common_certificate_issuer">Kibocsátó</string>
     <string name="common_certificate_valid_from">Érvényes ettől</string>
     <string name="common_certificate_valid_until">Érvényes eddig</string>
+    <string name="settings_keep_alive_header">Életben tartás</string>
+    <string name="settings_keep_alive_enabled_title">Javított háttér-megbízhatóság</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Időnként újraindítja a feliratkozási szolgáltatást a kézbesítés megbízhatóságának javításához (több akkumulátort használhat)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Alapértelmezett háttérviselkedés használata (jobb az akkumulátornak)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Elrejtés a legutóbbi alkalmazásokból</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Eltávolítja az ntfy-t a legutóbbi alkalmazások listájából (csökkenti az &quot;Összes törlése&quot; miatti kilövéseket)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Az ntfy megjelenítése a legutóbbi alkalmazások listájában</string>
 </resources>

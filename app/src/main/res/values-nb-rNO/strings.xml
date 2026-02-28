@@ -338,4 +338,11 @@
     <string name="settings_advanced_unifiedpush_summary_disabled">ntfy vil ikke fungere som UnifiedPush-distributør</string>
     <string name="settings_advanced_unifiedpush_summary_enabled">ntfy vil fungere som UnifiedPush-distributør</string>
     <string name="settings_advanced_unifiedpush_title">Aktiver UnifiedPush</string>
+    <string name="settings_keep_alive_header">Hold aktiv</string>
+    <string name="settings_keep_alive_enabled_title">Forbedret pålitelighet i bakgrunnen</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Starter abonnementstjenesten på nytt med jevne mellomrom for å forbedre leveringspåliteligheten (kan bruke mer batteri)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Bruk standard bakgrunnsatferd (bedre for batteriet)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Skjul fra nylige apper</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Fjerner ntfy fra listen over nylige apper (reduserer &quot;tøm alle&quot;-drap)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Vis ntfy i listen over nylige apper</string>
 </resources>

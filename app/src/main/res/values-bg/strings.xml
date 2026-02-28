@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="settings_keep_alive_header">Поддържане активно</string>
+    <string name="settings_keep_alive_enabled_title">Подобрена надеждност във фонов режим</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Периодично рестартира услугата за абонамент, за да подобри надеждността на доставката (може да харчи повече батерия)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Използвай стандартното поведение на заден план (по-добро за батерията)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Скрий от скорошните приложения</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Премахва ntfy от списъка със скорошни приложения (намалява спиранията при &quot;Изчистване на всички&quot;)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Показвай ntfy в списъка със скорошни приложения</string>
+
     <string name="common_priority_low_name">Нисък приоритет</string>
     <string name="common_priority_default_name">Подразбиран приоритет</string>
     <string name="common_priority_high_name">Висок приоритет</string>

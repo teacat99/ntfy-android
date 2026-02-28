@@ -463,4 +463,11 @@
     <string name="channel_subscriber_notification_reconnecting_one">ühendan uuesti 1 teemaga…</string>
     <string name="channel_subscriber_notification_reconnecting_other">ühendan uuesti %1$d teemaga…</string>
     <string name="default_server_dialog_url_error_invalid">Sisesta korrektne teenuse võrguaadress, nt https://ntfy.toredomeen.com</string>
+    <string name="settings_keep_alive_header">Hoia aktiivsena</string>
+    <string name="settings_keep_alive_enabled_title">Parendatud taustatöökindlus</string>
+    <string name="settings_keep_alive_enabled_summary_enabled">Taaskäivitab tellimusteenuse perioodiliselt, et parandada edastuse töökindlust (võib kasutada rohkem akut)</string>
+    <string name="settings_keep_alive_enabled_summary_disabled">Kasuta vaikimisi taustakäitumist (parem akule)</string>
+    <string name="settings_keep_alive_hide_from_recents_title">Peida hiljutistest rakendustest</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_enabled">Eemaldab ntfy hiljutiste rakenduste loendist (vähendab &quot;puhasta kõik&quot; tapmisi)</string>
+    <string name="settings_keep_alive_hide_from_recents_summary_disabled">Näita ntfy hiljutiste rakenduste loendis</string>
 </resources>
