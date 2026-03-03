@@ -219,7 +219,7 @@ class WsConnection(
         private const val TAG = "NtfyWsConnection"
         private const val RECONNECT_TAG = "WsReconnect"
         private const val WS_CLOSE_NORMAL = 1000
-        private val RETRY_SECONDS = listOf(5, 10, 15, 20, 30, 45, 60, 120)
+        private val RETRY_SECONDS = listOf(1, 1, 1, 5, 10, 15, 20, 30, 45, 60, 120)
         private val GLOBAL_ID = AtomicLong(0)
     }
 }

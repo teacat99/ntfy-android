@@ -94,6 +94,6 @@ class JsonConnection(
 
     companion object {
         private const val TAG = "NtfyJsonConnection"
-        private val RETRY_SECONDS = listOf(5, 10, 15, 20, 30, 45, 60, 120)
+        private val RETRY_SECONDS = listOf(1, 1, 1, 5, 10, 15, 20, 30, 45, 60, 120)
     }
 }
